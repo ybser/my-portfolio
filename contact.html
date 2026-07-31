@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="联系方式 - 姚宝升">
+  <title>联系方式 | 姚宝升</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">姚宝升</a>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="about.html" class="nav-link">关于我</a></li>
+        <li><a href="works.html" class="nav-link">作品展示</a></li>
+        <li><a href="contact.html" class="nav-link active">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <span class="hero-greeting">联系方式</span>
+      <h1 class="page-title">让我们聊聊</h1>
+      <p class="page-subtitle">无论是合作咨询还是项目讨论，欢迎随时与我取得联系</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="contact-wrapper">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <h2>联系方式</h2>
+            <p>
+              我目前接受新项目合作。如果你有任何想法或需求，
+              请通过以下方式与我联系，我会尽快回复你。
+            </p>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div>
+                  <div class="contact-label">姓名</div>
+                  <div class="contact-value">姚宝升</div>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-label">邮箱</div>
+                  <div class="contact-value"><a href="mailto:2058448113@qq.com">2058448113@qq.com</a></div>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-label">位置</div>
+                  <div class="contact-value">河北承德</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm">
+            <div class="form-success" id="formSuccess">
+              ✓ 消息已发送！我会尽快回复你。
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="name">姓名 <span class="required">*</span></label>
+              <input type="text" id="name" class="form-input" placeholder="请输入你的姓名" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">邮箱 <span class="required">*</span></label>
+              <input type="email" id="email" class="form-input" placeholder="请输入你的邮箱" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">主题</label>
+              <input type="text" id="subject" class="form-input" placeholder="合作咨询 / 项目讨论 / 其他">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">留言 <span class="required">*</span></label>
+              <textarea id="message" class="form-textarea" placeholder="请描述你的项目或需求..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">发送消息</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-brand">姚宝升</span>
+        <ul class="footer-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="works.html">作品展示</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 姚宝升. 保留所有权利。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+      });
+    });
+
+    // Form submission (demo)
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      success.classList.add('show');
+      form.reset();
+      setTimeout(() => {
+        success.classList.remove('show');
+      }, 4000);
+    });
+  </script>
+
+</body>
+</html>

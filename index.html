@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="姚宝升 - 新媒体运营与内容策划作品集">
+  <title>姚宝升 | 新媒体运营 / 内容策划</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">姚宝升</a>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">首页</a></li>
+        <li><a href="about.html" class="nav-link">关于我</a></li>
+        <li><a href="works.html" class="nav-link">作品展示</a></li>
+        <li><a href="contact.html" class="nav-link">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <span class="hero-greeting">你好，我是姚宝升 👋</span>
+      <h1 class="hero-title">
+        <span class="accent">新媒体运营</span> / 内容策划
+      </h1>
+      <p class="hero-subtitle">
+        3个平台累计阅读超10万 | 快手34万播放 | 扣子建站
+      </p>
+      <div class="hero-actions">
+        <a href="works.html" class="btn btn-primary">查看作品</a>
+        <a href="contact.html" class="btn btn-secondary">联系我 →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Section -->
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">我擅长</span>
+          <h2 class="section-title">专业领域</h2>
+        </div>
+        <div class="featured-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h3>内容运营</h3>
+            <p>负责快手、搜狐号、微博、知乎等多平台内容策划与分发，单篇最高阅读 30,339。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>数据采集</h3>
+            <p>使用八爪鱼采集行业数据，用数据驱动内容选题与运营策略优化。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🎬</div>
+            <h3>视频剪辑</h3>
+            <p>熟练使用 PR、AE、达芬奇进行视频剪辑、特效制作与调色，产出高质量短视频内容。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="container-narrow" style="text-align: center;">
+          <span class="section-tag">让我们合作</span>
+          <h2 class="section-title" style="margin-bottom: var(--spacing-md);">有项目想法？</h2>
+          <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); margin-bottom: var(--spacing-xl);">
+            无论是全新的产品设计还是现有项目的优化，我都很乐意与你交流。
+          </p>
+          <a href="contact.html" class="btn btn-primary">开始对话</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-brand">姚宝升</span>
+        <ul class="footer-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="works.html">作品展示</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 姚宝升. 保留所有权利。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

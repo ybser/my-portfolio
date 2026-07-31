@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="关于姚宝升 - 个人背景与专业经历">
+  <title>关于我 | 姚宝升</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">姚宝升</a>
+      <button class="nav-toggle" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="about.html" class="nav-link active">关于我</a></li>
+        <li><a href="works.html" class="nav-link">作品展示</a></li>
+        <li><a href="contact.html" class="nav-link">联系方式</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <span class="hero-greeting">关于我</span>
+      <h1 class="page-title">关于我</h1>
+      <p class="page-subtitle">新媒体运营 · 视频剪辑 · 数据采集</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Intro -->
+    <section class="section">
+      <div class="container">
+        <div class="about-intro">
+          <div class="about-avatar">姚</div>
+          <div class="about-text">
+            <h2>你好，我是姚宝升</h2>
+            <p>
+              河北美术学院广播电视编导专业 2026 届毕业生。在校期间运营快手校园账号，内容登热榜 TOP10，累计播放 34 万。实习期间统筹搜狐号、微博、知乎 3 个平台内容发布，单篇最高阅读 1408。熟练使用 PR、AE、达芬奇、PS、扣子建站、八爪鱼采集。
+            </p>
+            <a href="works.html" class="btn btn-primary" style="margin-top: var(--spacing-md);">查看我的作品</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">技能专长</span>
+          <h2 class="section-title">我能做什么</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>📝 内容运营</h3>
+            <ul class="skill-list">
+              <li>内容策划</li>
+              <li>多平台分发</li>
+              <li>数据优化</li>
+              <li>文案撰写</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>🎬 视频设计</h3>
+            <ul class="skill-list">
+              <li>PR 剪辑</li>
+              <li>AE 特效</li>
+              <li>达芬奇调色</li>
+              <li>可画设计</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>🔧 工具应用</h3>
+            <ul class="skill-list">
+              <li>扣子建站</li>
+              <li>八爪鱼采集</li>
+              <li>AI 内容工具</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">职业经历</span>
+          <h2 class="section-title">成长轨迹</h2>
+        </div>
+        <div class="container-narrow">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2025.06 - 至今</div>
+              <div class="timeline-title">新媒体运营 · 北京脉络洞察科技有限公司</div>
+              <p class="timeline-desc">
+                统筹搜狐号、微博、知乎 3 个平台内容发布与运营，累计发布 276+ 篇内容，总阅读超 7.4 万。
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2024.08 - 2024.09</div>
+              <div class="timeline-title">品牌市场部 · 万盟盛世国际投资控股有限公司</div>
+              <p class="timeline-desc">
+                参与品牌市场推广工作，协助完成品牌内容策划与物料制作。
+              </p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2024.07 - 2024.08</div>
+              <div class="timeline-title">活动落地执行 · 百度网盘</div>
+              <p class="timeline-desc">
+                负责百度网盘线上活动的落地执行与数据跟踪，保障活动按期上线。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span class="footer-brand">姚宝升</span>
+        <ul class="footer-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="works.html">作品展示</a></li>
+          <li><a href="contact.html">联系方式</a></li>
+        </ul>
+        <span class="footer-copy">© 2026 姚宝升. 保留所有权利。</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('active');
+      menu.classList.toggle('active');
+    });
+    // Close menu on link click (mobile)
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
