@@ -40,61 +40,19 @@
     <section class="section">
       <div class="container">
         <div class="contact-wrapper">
-          <!-- Contact Info -->
-          <div class="contact-info">
-            <h2>联系方式</h2>
-            <p>
-              我目前接受新项目合作。如果你有任何想法或需求，
-              请通过以下方式与我联系，我会尽快回复你。
+          <!-- 左侧：替代原来表单的内容 -->
+          <div class="contact-info" style="grid-column: 1 / -1; text-align: center; padding: 2rem 0;">
+            <p style="font-size: 1.2rem; color: #333; max-width: 600px; margin: 0 auto;">
+              📧 邮箱：<a href="mailto:2058448113@qq.com" style="color: #2563eb; text-decoration: none; font-weight: 500;">2058448113@qq.com</a>
             </p>
-            <ul class="contact-list">
-              <li class="contact-item">
-                <div class="contact-icon">👤</div>
-                <div>
-                  <div class="contact-label">姓名</div>
-                  <div class="contact-value">姚宝升</div>
-                </div>
-              </li>
-              <li class="contact-item">
-                <div class="contact-icon">📧</div>
-                <div>
-                  <div class="contact-label">邮箱</div>
-                  <div class="contact-value"><a href="mailto:2058448113@qq.com">2058448113@qq.com</a></div>
-                </div>
-              </li>
-              <li class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                  <div class="contact-label">位置</div>
-                  <div class="contact-value">河北承德</div>
-                </div>
-              </li>
-            </ul>
+            <p style="font-size: 1.1rem; color: #555; margin-top: 0.8rem;">
+              📍 河北承德
+            </p>
+            <p style="font-size: 1rem; color: #888; margin-top: 1.5rem; border-top: 1px solid #eaeaea; padding-top: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+              💬 如有合作或工作机会，欢迎随时邮件联系。<br>
+              我会在 24 小时内回复。
+            </p>
           </div>
-
-          <!-- Contact Form -->
-          <form class="contact-form" id="contactForm">
-            <div class="form-success" id="formSuccess">
-              ✓ 消息已发送！我会尽快回复你。
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="name">姓名 <span class="required">*</span></label>
-              <input type="text" id="name" class="form-input" placeholder="请输入你的姓名" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="email">邮箱 <span class="required">*</span></label>
-              <input type="email" id="email" class="form-input" placeholder="请输入你的邮箱" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="subject">主题</label>
-              <input type="text" id="subject" class="form-input" placeholder="合作咨询 / 项目讨论 / 其他">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="message">留言 <span class="required">*</span></label>
-              <textarea id="message" class="form-textarea" placeholder="请描述你的项目或需求..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">发送消息</button>
-          </form>
         </div>
       </div>
     </section>
@@ -117,7 +75,7 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
+    // Mobile menu toggle（保留）
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.nav-menu');
     toggle.addEventListener('click', () => {
@@ -131,18 +89,7 @@
         menu.classList.remove('active');
       });
     });
-
-    // Form submission (demo)
-    const form = document.getElementById('contactForm');
-    const success = document.getElementById('formSuccess');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      success.classList.add('show');
-      form.reset();
-      setTimeout(() => {
-        success.classList.remove('show');
-      }, 4000);
-    });
+    // 注意：原表单提交的 JS 已全部移除
   </script>
 
 </body>
