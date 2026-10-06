@@ -30,8 +30,8 @@
   <!-- Page Header -->
   <header class="page-header">
     <div class="container">
-      <span class="hero-greeting">联系方式</span>
-      <h1 class="page-title">让我们聊聊</h1>
+      <span class="hero-greeting">联系我</span>
+      <h1 class="page-title">联系方式</h1>
       <p class="page-subtitle">无论是合作咨询还是项目讨论，欢迎随时与我取得联系</p>
     </div>
   </header>
@@ -39,19 +39,37 @@
   <main>
     <section class="section">
       <div class="container">
-        <div class="contact-wrapper">
-          <!-- 左侧：替代原来表单的内容 -->
-          <div class="contact-info" style="grid-column: 1 / -1; text-align: center; padding: 2rem 0;">
-            <p style="font-size: 1.2rem; color: #333; max-width: 600px; margin: 0 auto;">
-              📧 邮箱：<a href="mailto:2058448113@qq.com" style="color: #2563eb; text-decoration: none; font-weight: 500;">2058448113@qq.com</a>
+        <div class="contact-wrapper contact-simple">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <p>
+              我目前接受新项目合作。如果你有任何想法或需求，
+              请通过以下方式与我联系，我会尽快回复你。
             </p>
-            <p style="font-size: 1.1rem; color: #555; margin-top: 0.8rem;">
-              📍 河北承德
-            </p>
-            <p style="font-size: 1rem; color: #888; margin-top: 1.5rem; border-top: 1px solid #eaeaea; padding-top: 1.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">
-              💬 如有合作或工作机会，欢迎随时邮件联系。<br>
-              我会在 24 小时内回复。
-            </p>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <div class="contact-icon">👤</div>
+                <div>
+                  <div class="contact-label">姓名</div>
+                  <div class="contact-value">姚宝升</div>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div>
+                  <div class="contact-label">邮箱</div>
+                  <div class="contact-value"><a href="mailto:2058448113@qq.com">2058448113@qq.com</a></div>
+                </div>
+              </li>
+              <li class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-label">位置</div>
+                  <div class="contact-value">现居北京 · 期望城市北京</div>
+                </div>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary" id="copyEmailBtn" style="margin-top: var(--spacing-xl);">复制邮箱</button>
           </div>
         </div>
       </div>
@@ -75,7 +93,7 @@
   </footer>
 
   <script>
-    // Mobile menu toggle（保留）
+    // Mobile menu toggle
     const toggle = document.querySelector('.nav-toggle');
     const menu = document.querySelector('.nav-menu');
     toggle.addEventListener('click', () => {
@@ -89,7 +107,21 @@
         menu.classList.remove('active');
       });
     });
-    // 注意：原表单提交的 JS 已全部移除
+
+    // Copy email to clipboard
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const email = '2058448113@qq.com';
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(email);
+        copyBtn.textContent = '✓ 已复制';
+      } catch (err) {
+        copyBtn.textContent = '复制失败，请手动复制';
+      }
+      setTimeout(() => {
+        copyBtn.textContent = '复制邮箱';
+      }, 2000);
+    });
   </script>
 
 </body>
