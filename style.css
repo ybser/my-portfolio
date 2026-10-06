@@ -733,6 +733,33 @@ main {
   padding: var(--spacing-2xl);
 }
 
+/* Simplified centered contact layout */
+.contact-simple {
+  grid-template-columns: 1fr;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-simple .contact-list {
+  align-items: center;
+}
+
+.contact-simple .contact-item {
+  justify-content: center;
+  text-align: left;
+}
+
+.contact-simple .contact-value {
+  font-size: var(--font-size-lg);
+}
+
+.contact-simple .contact-icon {
+  width: 56px;
+  height: 56px;
+  font-size: 1.5rem;
+}
+
 .form-group {
   margin-bottom: var(--spacing-lg);
 }
@@ -832,6 +859,76 @@ main {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   line-height: 1.6;
+}
+
+/* ============================
+   Featured Projects (Works Page)
+   ============================ */
+.project-cards {
+  display: grid;
+  gap: var(--spacing-xl);
+}
+
+.project-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  transition: all var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: 0 12px 36px var(--color-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.project-card-title {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.project-stat {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  background-color: rgba(37, 99, 235, 0.08);
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.project-block {
+  margin-bottom: var(--spacing-md);
+}
+
+.project-block:last-child {
+  margin-bottom: 0;
+}
+
+.project-label {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-xs);
+}
+
+.project-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.7;
 }
 
 /* ============================
